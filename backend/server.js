@@ -6,14 +6,14 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const multer = require('multer');
 const { v2: cloudinary } = require('cloudinary');
-const { CloudinaryStorage } = require('multer-storage-cloudinary');
+const { CloudinaryStorage } = require('multer-storage-cloudinary-v2');
 const { client } = require('@gradio/client');
 const { User, Product, History, ColorProfile } = require('./models');
 const { Contact, Subscriber, Cart, Order } = require('./models');
 
 const app = express();
 app.use(cors({
-  origin: 'https://tryonstylist.vercel.app', 
+  origin: 'http://localhost:5173/', 
   credentials: true
 }));
 app.use(express.json());
